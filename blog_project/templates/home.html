@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load %}
+
+{% block blog_entries %}
+{% for object in object_list %}
+	<div class="post">
+		<h2>{{ objects.title }}	
+		<p class="meta">{{ object.created }}</p>
+		{{ objects.body }}
+	</div>
+{% endfor %}
+{% endblock %}
